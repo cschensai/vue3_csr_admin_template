@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 去掉浏览器自动填充的背景色
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+  -webkit-text-fill-color: #303f5b !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// Element Plus 输入框自动填充样式
+.el-input__inner {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    -webkit-text-fill-color: #303f5b !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.el-input__wrapper {
+  &:-webkit-autofill {
+    background: #fff !important;
+  }
+}
+
+// 路由切换淡入淡出动画
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-fade-enter-from,
+.page-fade-leave-to {
+  opacity: 0;
+}
